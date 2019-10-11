@@ -37,6 +37,15 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Transaction> transactions;
 
+    public User(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public User() {
+
+    }
+
     public List<Transaction> getTransactions() {
         return transactions;
     }
